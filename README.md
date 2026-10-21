@@ -1,38 +1,72 @@
 # Taskly — JavaScript To-Do List
 
-A responsive To-Do List app built with vanilla HTML, CSS, and JavaScript as a mini project for a 30-day JavaScript learning challenge.
+A responsive To-Do List app built with vanilla HTML, CSS, and JavaScript as a mini project for my 30-Day JavaScript Learning Challenge.
 
-## Features
+## 🔗 Project Links
 
-- Add tasks
+- **Live Demo:** [View Taskly](https://js-todo-list-lilac.vercel.app/)
+- **GitHub Repository:** [View Source Code](https://github.com/kamarudheenkamzz/js-todo-list)
+
+## ✨ Features
+
+- Add new tasks
 - Mark tasks as completed or active
 - Edit and delete tasks
 - Filter tasks by All, Active, and Completed
 - Clear completed tasks
 - Live task counters
-- Automatically saves tasks with `localStorage`
-- Responsive layout for mobile and desktop
+- Automatically saves tasks using `localStorage`
+- Responsive design for mobile and desktop
 - Accessible labels and keyboard-friendly controls
 
-## Run locally
+## 🛠️ Technologies Used
 
-1. Download or clone this repository.
-2. Open `index.html` in your browser.
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- DOM Manipulation
+- Event Listeners
+- Array Methods
+- Local Storage
 
-No framework, package installation, or build step is required.
+## 🚀 Run Locally
 
-## Files
+1. Clone this repository:
 
-- `index.html` — page structure
-- `style.css` — layout, styling, and responsive design
-- `script.js` — task logic, events, rendering, and local storage
+   ```bash
+   git clone https://github.com/kamarudheenkamzz/js-todo-list.git
+   ```
 
-## Deploy on Netlify
+2. Open the project folder:
 
-1. Upload this folder to a GitHub repository.
-2. Sign in to Netlify and choose **Add new site → Import an existing project**.
-3. Connect the GitHub repository.
-4. Leave the build command empty and set the publish directory to `.` (the repository root).
-5. Deploy the site.
+   ```bash
+   cd js-todo-list
+   ```
 
-Your tasks are saved in the browser's local storage on the device/browser you use. They do not sync between devices.
+3. Open `index.html` in your browser.
+
+No frameworks, package installations, or build steps are required.
+
+## 📁 Project Structure
+
+```text
+js-todo-list/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
+
+## 💾 Data Storage
+
+Tasks are saved in the browser's Local Storage, so they remain available after refreshing the page. Data is stored locally in the current browser and does not automatically sync across devices.
+
+## 🎯 Learning Outcomes
+
+This project helped me practice JavaScript fundamentals, DOM manipulation, event handling, array methods, JSON, and Local Storage while building a practical web application.
+
+---
+
+Built with ❤️ as part of my **30-Day JavaScript Learning Challenge**.
+
+If you find this project useful, feel free to explore the source code and share your feedback!
