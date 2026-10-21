@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="description" content="A clean, responsive To-Do List built with HTML, CSS, and JavaScript." />
+  <title>Taskly — To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <div class="brand-mark" aria-hidden="true">✓</div>
+      <div>
+        <p class="eyebrow">YOUR PERSONAL TASK MANAGER</p>
+        <h1>Taskly<span>.</span></h1>
+        <p class="subtitle">Make space for what matters.</p>
+      </div>
+    </header>
+
+    <section class="task-card" aria-labelledby="tasks-heading">
+      <div class="card-top">
+        <div>
+          <p class="eyebrow">STAY ON TRACK</p>
+          <h2 id="tasks-heading">My tasks</h2>
+        </div>
+        <div class="date-pill" id="today-date"></div>
+      </div>
+
+      <form id="task-form" class="task-form">
+        <label class="sr-only" for="task-input">New task</label>
+        <input id="task-input" type="text" maxlength="140" placeholder="What do you need to do?" autocomplete="off" required />
+        <button class="primary-btn" type="submit"><span aria-hidden="true">＋</span> Add task</button>
+      </form>
+
+      <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+
+      <div class="summary" aria-label="Task summary">
+        <div class="summary-item">
+          <span class="summary-number" id="total-count">0</span>
+          <span class="summary-label">Total</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-number" id="active-count">0</span>
+          <span class="summary-label">To do</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-number" id="completed-count">0</span>
+          <span class="summary-label">Completed</span>
+        </div>
+      </div>
+
+      <div class="list-toolbar">
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="active" aria-pressed="false">Active</button>
+          <button class="filter-btn" type="button" data-filter="completed" aria-pressed="false">Completed</button>
+        </div>
+        <button id="clear-completed" class="text-btn" type="button">Clear completed</button>
+      </div>
+
+      <ul id="task-list" class="task-list" aria-label="Your tasks"></ul>
+
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon" aria-hidden="true">✦</div>
+        <h3 id="empty-title">A fresh start</h3>
+        <p id="empty-description">Add your first task above and take it one step at a time.</p>
+      </div>
+
+      <footer class="card-footer">
+        <span><span class="status-dot"></span> Saved automatically on this device</span>
+        <span id="remaining-label">You're all caught up.</span>
+      </footer>
+    </section>
+
+    <p class="app-credit">Built with <strong>HTML</strong>, <strong>CSS</strong> &amp; <strong>JavaScript</strong></p>
+  </main>
+
+  <dialog id="edit-dialog" class="edit-dialog" aria-labelledby="edit-heading">
+    <form id="edit-form" method="dialog">
+      <p class="eyebrow">MAKE A CHANGE</p>
+      <h2 id="edit-heading">Edit task</h2>
+      <label for="edit-input">Task name</label>
+      <input id="edit-input" type="text" maxlength="140" required />
+      <div class="dialog-actions">
+        <button id="cancel-edit" class="secondary-btn" type="button">Cancel</button>
+        <button class="primary-btn" type="submit">Save changes</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
